@@ -1,0 +1,259 @@
+/* Start Global Rule */
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Global Rule */
+section {
+    position: relative;
+    background-color: #2b2d42;
+    min-height: 100vh;
+    color: white;
+    width: 100%;
+}
+section .container header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 78.4px;
+}
+
+section .container header .logo {
+    height: 50px;
+}
+
+
+section .container header .links {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+section .container header .links .icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+@media (min-width:768px) {
+    section .container header .links .icon {
+        display: none;
+    }
+}
+section .container header .links span {
+    height: 2.5px;
+    margin-bottom: 5px;
+    background-color: white;
+}
+
+section .container header .links .icon span:first-child {
+    width: 100%;
+}
+section .container header .links .icon span:nth-child(2) {
+    width: 60%;
+    transition: 0.3s ease-in-out;
+}
+section .container header .links .icon span:last-child {
+    width: 100%;
+}
+
+section .container header .links:hover .icon span:nth-child(2) {
+    width: 100%;
+}
+
+section .container header  ul {
+    display: flex;
+    list-style: none;
+}
+
+section .container header  ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 30px 20px;
+    position: relative;
+    font-weight: 500;
+    font-size: 18px;
+    z-index: 1000;
+}
+
+section .container header  ul li a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    left: 0;
+    height: 100%;
+    top: 0;
+    transition: 0.3s ease-in-out;
+    z-index: -1;
+}
+section .container header  ul li a:hover::before {
+    background-color: #1d3557;
+    width: 100%;
+    border-top: 3px solid white;
+}
+@media (max-width:768px) {
+    section .container header .logo {
+        height: 40px;
+    }
+
+    section .container header  ul {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        top: calc(100% + 22px);
+        z-index: 100;
+        /* opacity: 0; */
+        display: none;
+    }
+
+    section .container header .links:hover ul {
+        display: flex;
+        transition: 0.3s ease-in-out;
+        background-color: #2b2d42;
+        /* opacity: 1; */
+        display: block;
+        color: white;
+    }
+
+    section .container header  ul li a {
+        padding: 10px;
+        display: block;
+    }
+}
+/* End Header */
+/* Start Landing */
+section .container .landing {
+    position: relative;
+    min-height: calc(100vh - 81px);
+    padding: 50px 0 ;
+}
+section .container .landing .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+section .container .landing .content .info {
+    width: 50%;
+}
+
+section .container .landing .content .info h1 {
+    font-size: 2.2em;
+    letter-spacing: -2px;
+    font-weight: bold;
+}
+
+section .container .landing .content .info p {
+    font-size: 1em;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+section .container .landing .content .info a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    margin-top: 20px;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: 0.3s ease-in-out;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+section .container .landing .content .info a:hover {
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    transform: translateY(10px);
+}
+
+section .container .landing .content img {
+   max-width: 200px;
+}
+section .container .landing .thump {
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    transform: translate(-50%);
+
+}
+section .container .landing .thump img {
+    max-width: 50px;
+}
+section .circle {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(50% at right 850px);
+    background-color: #2b2d42;
+}
+
+@media (max-width:768px) {
+    section .container .landing .content {
+        justify-content: center;
+    }
+    section .container .landing .content .info {
+        width: 100%;
+        text-align: center;
+    }
+    section .container .landing .content img {
+        max-width: 120px;
+        margin-top: 20px;
+    }
+    section .container .landing .thump img {
+        max-width: 30px;
+    }
+    section .circle {
+        clip-path: circle(50% at right 700px);
+    }
+    section .container .landing .thump {
+        bottom: 10px;
+    }
+}
+/* End Landing */

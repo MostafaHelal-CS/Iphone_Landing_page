@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPHONE LANDING</title>
+    <!-- css file -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Render All File -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@100;200;300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Start Header -->
+    <section>
+        <div class="container">
+            <div class="circle"></div>
+            <header>
+                <img src="images/logo.png" alt="logo image" class="logo">
+                <div class="links">
+                    <span class="icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                    <ul>
+                        <li><a href="#Home" class="active">Home</a></li>
+                        <li><a href="#Products">Products</a></li>
+                        <li><a href="#News">New's</a></li>
+                        <li><a href="#About">About</a></li>
+                        <li><a href="#Contact">Contact</a></li>
+                    </ul>
+                </div>
+            </header>
+            <!-- End Header -->
+            <!-- Start Landing -->
+            <div class="landing">
+                <div class="content">
+                    <div class="info">
+                        <h1>IPHONE 13 PRO MAX</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem tenetur deserunt, vero quae voluptatum velit.</p>
+                        <a href="#" class="link">all product</a>
+                    </div>
+                    <img src="images/1.png" alt="" class="mainImage">  
+                </div>
+                <div class="thump">
+                    <img src="images/0.png" alt="" onclick="changeCircleColor('#d1af54');ChangeImageSlider('images/0.png');changeLink('#d1af54')">
+                    <img src="images/1.png" alt="" onclick="changeCircleColor('#9bb5cb');ChangeImageSlider('images/1.png');changeLink('#9bb5cb')">
+                    <img src="images/2.png" alt="" onclick="changeCircleColor('#51504c');ChangeImageSlider('images/2.png');changeLink('#51504c')">
+                    <img src="images/3.png" alt="" onclick="changeCircleColor('#e6d4b9');ChangeImageSlider('images/3.png');changeLink('#e6d4b9')">
+                    <img src="images/4.png" alt="" onclick="changeCircleColor('#e40505');ChangeImageSlider('images/4.png');changeLink('#e40505')">
+                </div>
+            </div>
+            <!-- End Landing -->
+        </div>
+    </section>
+    <script type="text/javascript">
+        function changeCircleColor(color) {
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+        function ChangeImageSlider (anything) {
+            document.querySelector('.mainImage').src = anything;
+        }
+        function changeLink (color) {
+            let link = document.querySelector('.link');
+            link.style.background = color;
+        }
+    </script>
+</body>
+</html>
